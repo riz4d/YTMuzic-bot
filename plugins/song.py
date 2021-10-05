@@ -23,9 +23,6 @@ async def start(client, message):
             [
                 [
                     InlineKeyboardButton('Developer', url='https://instagram.com/rizadx__96')
-                ],
-                [
-                    InlineKeyboardButton('Search Inline', switch_inline_query_current_chat='')
                 ]
             ]
         )
