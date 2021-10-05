@@ -21,15 +21,11 @@ def time_to_seconds(time):
 ## Commands --------
 @Client.on_message(filters.command(['start']))
 async def start(client, message):
-       await message.reply("Hey I'm Lilly\n\n Your Music Assistant(https://j.top4top.io/p_2092uhkq40.jpg)\n\nSent Me A Song Name You Want</b>\n\nI Will Download It For You.\n\nEg. `Levitating`",
+       await message.reply("Hey I'm Lilly\n\n Your Music Assistant\n\nSent Me A Song Name You Want</b>\n\nI Will Download It For You.\n\nEg. `Levitating`",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton('Developer', url='https://instagram/rizad__x96'),
-                    InlineKeyboardButton('TG support', url='https://t.me/rizad_x96')
-                ],
-                [
-                    InlineKeyboardButton('Search Inline', switch_inline_query_current_chat='')
+                    InlineKeyboardButton('Developer', url='https://instagram/rizad__x96')
                 ]
             ]
         )
