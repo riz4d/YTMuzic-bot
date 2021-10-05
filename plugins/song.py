@@ -18,12 +18,11 @@ def time_to_seconds(time):
 ## Commands --------
 @Client.on_message(filters.command(['start']))
 async def start(client, message):
-       await message.reply("Hey I'm Lilly\n\n Your Music Assistant(https://telegra.ph/file/92a1f08c6ca91e0e8c163.mp4)\n\nSent me song name which you want...🤗",
+       await message.reply("Hey I'm Lilly\nYour Music Assistant\n\nSent me song name which you want...🤗",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton('𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿', url='https://t.me/Peterparker6'),
-                    InlineKeyboardButton('𝗦𝗼𝘂𝗿𝗰𝗲', url='https://github.com/Avengers105/Music-Bot')
+                    InlineKeyboardButton('Developer', url='https://instagram.com/rizadx__96')
                 ],
                 [
                     InlineKeyboardButton('Search Inline', switch_inline_query_current_chat='')
@@ -60,7 +59,7 @@ async def about(client, message):
 def a(client, message):
     query=message.text
     print(query)
-    m = message.reply('🔎 𝗦𝗲𝗮𝗿𝗰𝗵𝗶𝗻𝗴 𝘁𝗵𝗲 𝗦𝗼𝗻𝗴...')
+    m = message.reply('Searching the song...')
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = []
