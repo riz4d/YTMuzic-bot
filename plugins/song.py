@@ -22,12 +22,6 @@ def time_to_seconds(time):
 @Client.on_message(filters.command(['start']))
 async def start(client, message):
        await message.reply("Hey I'm Lilly\n\nYour Music Assistant\nSent Me A Song Name You Want\nI Will Download It For You.",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton('developer', url='https://instagram/rizad__x96')
-                ]
-            ]
         )
     )
 
@@ -45,7 +39,7 @@ async def help(client, message):
 
 @Client.on_message(filters.command(['about']))
 async def about(client, message):
-       await message.reply("➪<b>Name</b> : <i>Lilly</i>\n➪<b>Developer</b> : [Muhammed Rizad](https://t.me/rizad__x9)\n➪<b>Language</b> : ✫<i>Python</i>\n➪<b>Follow Me</b> : ✫[InstaGram](https://instagram/rizad__x96)",
+       await message.reply("➪<b>Name</b> : <i>Lilly</i>\n➪<b>Developer</b> : [Muhammed Rizad](https://t.me/rizad__x96)\n➪<b>Language</b> : ✫<i>Python</i>\n➪<b>Follow Me</b> : ✫ [InstaGram](https://instagram/rizad__x96)",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
