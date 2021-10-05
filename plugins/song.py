@@ -73,7 +73,7 @@ def a(client, message):
         try:
             link = f"https://youtube.com{results[0]['url_suffix']}"
             # print(results)
-            title = results[0]["title"]
+            title = results[0]
             thumbnail = results[0]["thumbnails"][0]
             duration = results[0]["duration"]
 
