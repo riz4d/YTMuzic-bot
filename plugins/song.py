@@ -1,4 +1,4 @@
-#                     ----------------------------- @Peterparker6 ---------------------------
+#                     ----------------------------- @rizadmuhammed ---------------------------
 
 
 import os
@@ -26,9 +26,11 @@ async def start(client, message):
             [
                 [
                     InlineKeyboardButton('Developer', url='https://instagram/rizad__x96'),
-                    InlineKeyboardButton('Search Inline', switch_inline_query_current_chat='')
+                    InlineKeyboardButton('TG support', url='https://t.me/rizad_x96')
                 ],
-                
+                [
+                    InlineKeyboardButton('Search Inline', switch_inline_query_current_chat='')
+                ]
             ]
         )
     )
