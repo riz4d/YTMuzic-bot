@@ -1,6 +1,3 @@
-#                     ----------------------------- @rizadmuhammed ---------------------------
-
-
 import os
 import time
 import ffmpeg
@@ -21,17 +18,27 @@ def time_to_seconds(time):
 ## Commands --------
 @Client.on_message(filters.command(['start']))
 async def start(client, message):
-       await message.reply("Hey I'm Lilly\n\nYour Music Assistant\nSent Me A Song Name You Want\nI Will Download It For You.",
+       await message.reply("👋 𝗛𝗲𝗹𝗹𝗼 𝗕𝗿𝗼\n\n𝐈 𝐚𝐦 𝐌𝐮𝐬𝐢𝐜 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫[🎶](https://telegra.ph/file/92a1f08c6ca91e0e8c163.mp4)\n\n𝑺𝒆𝒏𝒕 𝒕𝒉𝒆 𝑵𝒂𝒎𝒆 𝒐𝒇 𝒕𝒉𝒆 𝐒𝐨𝐧𝐠 𝒀𝒐𝒖 𝑾𝒂𝒏𝒕... 😍🥰🤗\n<b>Also I Support Inline YouTube Search 😉</b>\n\n𝗝𝘂𝘀𝘁 𝗧𝘆𝗽𝗲 𝗮 𝗦𝗼𝗻𝗴 𝗡𝗮𝗺𝗲\n\n𝐄𝐠. `Believer`",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton('𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿', url='https://t.me/Peterparker6'),
+                    InlineKeyboardButton('𝗦𝗼𝘂𝗿𝗰𝗲', url='https://github.com/Avengers105/Music-Bot')
+                ],
+                [
+                    InlineKeyboardButton('Search Inline', switch_inline_query_current_chat='')
+                ]
+            ]
         )
     )
 
 @Client.on_message(filters.command(['help']))
 async def help(client, message):
-       await message.reply("Hey I'm Lilly\n\n Your Music Assistant\n\nEg. `Levitating`",
+       await message.reply("<b>Simplest Way😂</b>\n\n<i>How many times have I said that just giving the name of a song is enough.🙄\nDo not expect any other help from me😠</i>\n\n<b>Eg</b> `Vaathi Coming`",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton('Developer', url='https://instagram/rizad__x96')
+                    InlineKeyboardButton('𝗦𝗼𝘂𝗿𝗰𝗲', url='https://github.com/Avengers105/Music-Bot')
                 ]
             ]
         )
@@ -39,7 +46,7 @@ async def help(client, message):
 
 @Client.on_message(filters.command(['about']))
 async def about(client, message):
-       await message.reply("➪<b>Name</b> : <i>Lilly</i>\n➪<b>Developer</b> : [Muhammed Rizad](https://t.me/rizad__x96)\n➪<b>Language</b> : ✫<i>Python</i>\n➪<b>Follow Me</b> : ✫ [InstaGram](https://instagram/rizad__x96)",
+       await message.reply("➪<b>Name</b> : ✫<i>Music Downloader</i>\n➪<b>Developer</b> : ✫[𝘗𝘦𝘵𝘦𝘳 𝘗𝘢𝘳𝘬𝘦𝘳](https://t.me/Peterparker6)\n➪<b>Language</b> : ✫<i>Python3</i>\n➪<b>Server</b> : ✫[𝘏𝘦𝘳𝘰𝘬𝘶](https://heroku.com/)\n➪<b>Source Code</b> : ✫[𝘊𝘭𝘪𝘤𝘬 𝘏𝘦𝘳𝘦](https://github.com/Avengers105/Music-Bot)",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -53,7 +60,7 @@ async def about(client, message):
 def a(client, message):
     query=message.text
     print(query)
-    m = message.reply('Searching Your Song...')
+    m = message.reply('🔎 𝗦𝗲𝗮𝗿𝗰𝗵𝗶𝗻𝗴 𝘁𝗵𝗲 𝗦𝗼𝗻𝗴...')
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = []
@@ -87,17 +94,17 @@ def a(client, message):
             return
     except Exception as e:
         m.edit(
-            "❎ I can't Found Nothing related your Search.\n\nPlease Check Your Spell\n\nEg.`Levitating`"
+            "❎ 𝐹𝑜𝑢𝑛𝑑 𝑁𝑜𝑡ℎ𝑖𝑛𝑔. 𝐒𝐨𝐫𝐫𝐲.\n\n𝖯𝗅𝖾𝖺𝗌𝖾 𝖳𝗋𝗒 𝖠𝗀𝖺𝗂𝗇 𝖮𝗋 𝖲𝖾𝖺𝗋𝖼𝗁 𝖺𝗍 Google.com 𝖥𝗈𝗋 𝖢𝗈𝗋𝗋𝖾𝖼𝗍 𝖲𝗉𝖾𝗅𝗅𝗂𝗇𝗀 𝗈𝖿 𝗍𝗁𝖾 𝙎𝙤𝙣𝙜.\n\nEg.`Believer`"
         )
         print(str(e))
         return
-    m.edit("`Uploading Your Song,Please Wait...`[🎧](https://j.top4top.io/p_2092uhkq40.jpg)")
+    m.edit("`Uploading Your Song,Please Wait...`[🎧](https://telegra.ph/file/33e209cb838912e8714c9.mp4)")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep =  f'🎧 𝗧𝗶𝘁𝘁𝗹𝗲 : [{title[:35]}]({link})\n✫ 𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻 : `{duration}`\n✫ 𝗩𝗶𝗲𝘄𝘀 : `{views}`\n\n✫ To: {message.from_user.mention()}\n✫ From: @LILLYMUZICBOT'
+        rep =  f'🎧 𝗧𝗶𝘁𝘁𝗹𝗲 : [{title[:35]}]({link})\n⏳ 𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻 : `{duration}`\n👀 𝗩𝗶𝗲𝘄𝘀 : `{views}`\n\n📮 𝗕𝘆: {message.from_user.mention()}\n📤 𝗕𝘆 : @MusicDownloadv2bot'
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
@@ -105,7 +112,7 @@ def a(client, message):
         message.reply_audio(audio_file, caption=rep, parse_mode='HTML',quote=False, title=title, duration=dur, performer=str(info_dict["uploader"]), thumb=thumb_name)
         m.delete()
     except Exception as e:
-        m.edit('Failed\n\n`Plesase Try Again Later`')
+        m.edit('𝙁𝙖𝙞𝙡𝙚𝙙\n\n`Plesase Try Again Later`')
         print(e)
     try:
         os.remove(audio_file)
