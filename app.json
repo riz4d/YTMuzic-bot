@@ -1,0 +1,29 @@
+{
+    "name": "Lilly-muzic",
+    "description": "A Telegram Bot To Download Music In High Quality. Developed By @riz4d",
+    "logo": "https://j.top4top.io/p_2092uhkq40.jpg",
+    "keywords": [
+        "rizad"
+    ],
+    "env": {
+        "BOT_TOKEN": {
+            "description": "Your Telegram Bot Token from @BotFather",
+            "value": ""
+        }
+    },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
