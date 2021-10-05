@@ -22,7 +22,7 @@ async def start(client, message):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton('Developer', url='https://instagram.com/rizadx__96')
+                    InlineKeyboardButton('Developer', url='https://instagram.com/rizad__x96')
                 ]
             ]
         )
