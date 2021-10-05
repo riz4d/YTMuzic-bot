@@ -19,9 +19,9 @@ def time_to_seconds(time):
 
 
 ## Commands --------
-@Client.on_message(filters.command(['startt']))
-async def startt(client, message):
-       await message.reply("➪<b> : ✫ [InstaGram](https://instagram/rizad__x96)",
+@Client.on_message(filters.command(['start']))
+async def start(client, message):
+       await message.reply("Hey I'm Lilly\n\n Your Music Assistant(https://j.top4top.io/p_2092uhkq40.jpg)",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
