@@ -18,7 +18,7 @@ def time_to_seconds(time):
 ## Commands --------
 @Client.on_message(filters.command(['start']))
 async def start(client, message):
-       await message.reply("Hey I'm Lilly\nYour Music Assistant [🎧](https://j.top4top.io/p_2092uhkq40.jpg)\n\nSent me song name which you want...🤗",
+       await message.reply("Hey I'm Lilly\nYour Music Assistant [🎧](https://j.top4top.io/p_2092uhkq40.jpg)\nSent me song name which you want...",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
