@@ -17,7 +17,7 @@
         "API-HASH": {
             "description": "Your Telegram HASHr",
             "value": ""
-        },
+        }
     },
     "addons": [],
     "buildpacks": [
