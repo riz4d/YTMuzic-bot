@@ -18,7 +18,7 @@ def time_to_seconds(time):
 ## Commands --------
 @Client.on_message(filters.command(['start']))
 async def start(client, message):
-       await message.reply("Hey I'm Lilly\nYour Music Assistant\n\nSent me song name which you want...🤗",
+       await message.reply("Hey I'm Lilly\nYour Music Assistant [🎧](https://j.top4top.io/p_2092uhkq40.jpg)\n\nSent me song name which you want...🤗",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -33,11 +33,11 @@ async def start(client, message):
 
 @Client.on_message(filters.command(['help']))
 async def help(client, message):
-       await message.reply("<b>Simplest Way😂</b>\n\n<i>How many times have I said that just giving the name of a song is enough.🙄\nDo not expect any other help from me😠</i>\n\n<b>Eg</b> `Vaathi Coming`",
+       await message.reply("<b><i>How many times have I said that just giving the name of a song\nDo not expect any other help from me.</i>\n\n<b>Eg</b> `Tu hi hai`",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton('𝗦𝗼𝘂𝗿𝗰𝗲', url='https://github.com/Avengers105/Music-Bot')
+                    InlineKeyboardButton('Developer', url='https://t.me/rizad_x96')
                 ]
             ]
         )
@@ -45,7 +45,7 @@ async def help(client, message):
 
 @Client.on_message(filters.command(['about']))
 async def about(client, message):
-       await message.reply("➪<b>Name</b> : ✫<i>LILLY</i>\n➪<b>Developer</b> : ✫[�Muhammed Rizad](https://t.me/rizad__x96)\n➪<b>Language</b> : ✫<i>Python</i>\n➪<b>Libraryr</b> : Pyrogram",
+       await message.reply("➪<b>Name</b> : <i>LILLY</i>\n➪<b>Developer</b> : [rizad__x96](https://t.me/rizad__x96)\n➪<b>Language</b> : <i>Python</i>\n➪<b>Library</b> : Pyrogram",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -89,21 +89,21 @@ def a(client, message):
 
         except Exception as e:
             print(e)
-            m.edit('𝐅𝐨𝐮𝐧𝐝 𝐍𝐨𝐭𝐡𝐢𝐧𝐠. 𝐓𝐫𝐲 𝐂𝐡𝐚𝐧𝐠𝐢𝐧𝐠 𝐓𝐡𝐞 𝐒𝐩𝐞𝐥𝐥𝐢𝐧𝐠 𝐀 𝐋𝐢𝐭𝐭𝐥𝐞 😐')
+            m.edit('nothing can can found!!')
             return
     except Exception as e:
         m.edit(
-            "❎ 𝐹𝑜𝑢𝑛𝑑 𝑁𝑜𝑡ℎ𝑖𝑛𝑔. 𝐒𝐨𝐫𝐫𝐲.\n\n𝖯𝗅𝖾𝖺𝗌𝖾 𝖳𝗋𝗒 𝖠𝗀𝖺𝗂𝗇 𝖮𝗋 𝖲𝖾𝖺𝗋𝖼𝗁 𝖺𝗍 Google.com 𝖥𝗈𝗋 𝖢𝗈𝗋𝗋𝖾𝖼𝗍 𝖲𝗉𝖾𝗅𝗅𝗂𝗇𝗀 𝗈𝖿 𝗍𝗁𝖾 𝙎𝙤𝙣𝙜.\n\nEg.`Believer`"
+            "❎ 𝐒𝐨𝐫𝐫𝐲.\n\n𝖯𝗅𝖾𝖺𝗌𝖾 𝖳𝗋𝗒 𝖠𝗀𝖺𝗂𝗇 𝖮𝗋 Spell it correctly.\n\nEg.`Faded`"
         )
         print(str(e))
         return
-    m.edit("`Uploading Your Song,Please Wait...`[🎧](https://telegra.ph/file/33e209cb838912e8714c9.mp4)")
+    m.edit("`Uploading Your Song,Please Wait...`[🎧](https://j.top4top.io/p_2092uhkq40.jpg)")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep =  f'🎧 𝗧𝗶𝘁𝘁𝗹𝗲 : [{title[:35]}]({link})\n⏳ 𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻 : `{duration}`\n👀 𝗩𝗶𝗲𝘄𝘀 : `{views}`\n\n📮 𝗕𝘆: {message.from_user.mention()}\n📤 𝗕𝘆 : @MusicDownloadv2bot'
+        rep =  f'🎧 𝗧𝗶𝘁𝘁𝗹𝗲 : [{title[:35]}]({link})\n𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻 : `{duration}`\n 𝗩𝗶𝗲𝘄𝘀 : `{views}`\n\nTo : {message.from_user.mention()}\nFrom : @LILLYMUZICBOT'
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
