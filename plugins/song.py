@@ -42,7 +42,7 @@ async def help(client, message):
 
 @Client.on_message(filters.command(['about']))
 async def about(client, message):
-       await message.reply("➪<b>Project Name</b> : [LILLY](https://t.me/LILLYMUZICBOT)\n➪<b>Author</b> : [@rizad__x96](https://t.me/rizad__x96)\n➪<b>Library</b> : Pyrogram\n➪<b>License Type</b> : GNU General public License (GPL)",
+       await message.reply("➪<b>Project Name</b> : [LILLY](https://t.me/LILLYMUZICBOT)\n➪<b>Author</b> : [@rizad_x96](https://t.me/rizad_x96)\n➪<b>Library</b> : Pyrogram\n➪<b>License Type</b> : GNU General public License (GPL)",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
