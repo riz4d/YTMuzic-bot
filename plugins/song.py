@@ -45,7 +45,7 @@ async def help(client, message):
 
 @Client.on_message(filters.command(['about']))
 async def about(client, message):
-       await message.reply("➪<b>Name</b> : ✫<i>Music Downloader</i>\n➪<b>Developer</b> : ✫[𝘗𝘦𝘵𝘦𝘳 𝘗𝘢𝘳𝘬𝘦𝘳](https://t.me/Peterparker6)\n➪<b>Language</b> : ✫<i>Python3</i>\n➪<b>Server</b> : ✫[𝘏𝘦𝘳𝘰𝘬𝘶](https://heroku.com/)\n➪<b>Source Code</b> : ✫[𝘊𝘭𝘪𝘤𝘬 𝘏𝘦𝘳𝘦](https://github.com/Avengers105/Music-Bot)",
+       await message.reply("➪<b>Name</b> : ✫<i>LILLY</i>\n➪<b>Developer</b> : ✫[�Muhammed Rizad](https://t.me/rizad__x96)\n➪<b>Language</b> : ✫<i>Python</i>\n➪<b>Libraryr</b> : Pyrogram",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
