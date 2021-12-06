@@ -18,7 +18,7 @@ def time_to_seconds(time):
 ## Commands --------
 @Client.on_message(filters.command(['start']))
 async def start(client, message):
-       await message.reply("➪ ʜᴇʏ., ɪᴀᴍ ʟɪʟʟʏ\n➪ ʏᴏᴜʀ ᴍᴜsɪᴄ ᴀssɪsᴛᴀɴᴛ [🎧](https://j.top4top.io/p_2092uhkq40.jpg)\n➪ sᴇɴᴛ ᴍᴇ ᴀ sᴏɴɢ ɴᴀᴍᴇ ᴡʜɪᴄʜ ʏᴏᴜ ᴡᴀɴᴛ...",
+       await message.reply("➪ ʜᴇʏ., ɪᴀᴍ ʟɪʟʟʏ\n➪ ʏᴏᴜʀ ᴍᴜsɪᴄ ᴀssɪsᴛᴀɴᴛ [🎧](https://raw.githubusercontent.com/riz4d/Lilly-Muzic/main/riz4d.jpg)\n➪ sᴇɴᴛ ᴍᴇ ᴀ sᴏɴɢ ɴᴀᴍᴇ ᴡʜɪᴄʜ ʏᴏᴜ ᴡᴀɴᴛ...",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -94,13 +94,13 @@ def a(client, message):
         )
         print(str(e))
         return
-    m.edit("`Uploading Your Song,Please Wait...`[🎧](https://j.top4top.io/p_2092uhkq40.jpg)")
+    m.edit("`Uploading Your Song,Please Wait...`[🎧](https://raw.githubusercontent.com/riz4d/Lilly-Muzic/main/riz4d.jpg)")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep =  f'🎧 𝗧𝗶𝘁𝘁𝗹𝗲 : [{title[:35]}]({link})\n𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻 : `{duration}`\n 𝗩𝗶𝗲𝘄𝘀 : `{views}`\n\nTo : {message.from_user.mention()}\nFrom : @LILLYMUZICBOT'
+        rep =  f'🎧 ᴛɪᴛᴛʟᴇ : [{title[:35]}]({link})\ nᴅᴜʀᴀᴛɪᴏɴ : `{duration}`\n ᴠɪᴇᴡs : `{views}`\n\nTo : {message.from_user.mention()}\nFrom : @LILLYMUZICBOT'
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
@@ -108,7 +108,7 @@ def a(client, message):
         message.reply_audio(audio_file, caption=rep, parse_mode='HTML',quote=False, title=title, duration=dur, performer=str(info_dict["uploader"]), thumb=thumb_name)
         m.delete()
     except Exception as e:
-        m.edit('𝙁𝙖𝙞𝙡𝙚𝙙\n\n`Plesase Try Again Later`')
+        m.edit('ғᴀɪʟᴇᴅ\n\n`Plesase Try Again Later`')
         print(e)
     try:
         os.remove(audio_file)
