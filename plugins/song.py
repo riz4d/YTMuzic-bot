@@ -18,11 +18,11 @@ def time_to_seconds(time):
 ## Commands --------
 @Client.on_message(filters.command(['start']))
 async def start(client, message):
-       await message.reply("➪ ʜᴇʏ., ɪᴀᴍ ʟɪʟʟʏ\n➪ ʏᴏᴜʀ ᴍᴜsɪᴄ ᴀssɪsᴛᴀɴᴛ 🎧\n➪ sᴇɴᴛ ᴍᴇ ᴀ sᴏɴɢ ɴᴀᴍᴇ ᴡʜɪᴄʜ ʏᴏᴜ ᴡᴀɴᴛ...",
+       await message.reply("➪ ʜᴇʏ., ɪᴀᴍ ʏᴛᴍᴜᴢɪᴄ ʙᴏᴛ\n➪ ʏᴏᴜʀ ᴍᴜsɪᴄ ᴀssɪsᴛᴀɴᴛ 🎧\n➪ sᴇɴᴛ ᴍᴇ ᴀ sᴏɴɢ ɴᴀᴍᴇ ᴡʜɪᴄʜ ʏᴏᴜ ᴡᴀɴᴛ...",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton('Developer', url='https://instagram.com/riz4d')
+                    InlineKeyboardButton('Developer', url='https://instagram.com/rizad__x96')
                 ]
             ]
         )
@@ -34,7 +34,7 @@ async def help(client, message):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton('Developer', url='https://t.me/rizad_x96')
+                    InlineKeyboardButton('Developer', url='https://t.me/riz4d')
                 ]
             ]
         )
@@ -42,7 +42,7 @@ async def help(client, message):
 
 @Client.on_message(filters.command(['about']))
 async def about(client, message):
-       await message.reply("➪<b>Project Name</b> : [LILLY](https://t.me/LILLYMUZICBOT)\n➪<b>Author</b> : [@rizad_x96](https://t.me/rizad_x96)\n➪<b>Library</b> : Pyrogram\n➪<b>License Type</b> : GNU General public License (GPL)",
+       await message.reply("➪<b>Project Name</b> : [YT-Muzic](https://t.me/YTMuzic_bot)\n➪<b>Author</b> : [@riz4d](https://t.me/riz4d)\n➪<b>Library</b> : Pyrogram\n➪<b>License Type</b> : GNU General public License (GPL)",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -100,7 +100,7 @@ def a(client, message):
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep =  f'🎧 ᴛɪᴛᴛʟᴇ : {title[:35]}\n ᴅᴜʀᴀᴛɪᴏɴ : `{duration}`\n ᴠɪᴇᴡs : `{views}`\n\nTo : {message.from_user.mention()}\nFrom : @LILLYMUZICBOT'
+        rep =  f'🎧 ᴛɪᴛᴛʟᴇ : {title[:35]}\n ᴅᴜʀᴀᴛɪᴏɴ : {duration}\n ᴠɪᴇᴡs : {views}\n\nTo : {message.from_user.mention()}\n Queries : @riz4d'
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
@@ -108,7 +108,7 @@ def a(client, message):
         message.reply_audio(audio_file, caption=rep, parse_mode='HTML',quote=False, title=title, duration=dur, performer=str(info_dict["uploader"]), thumb=thumb_name)
         m.delete()
     except Exception as e:
-        m.edit('ғᴀɪʟᴇᴅ\n\n`Plesase Try Again Later`')
+        m.edit('Failed\n\n`Plesase Try Again Later`')
         print(e)
     try:
         os.remove(audio_file)
