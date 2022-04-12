@@ -18,11 +18,11 @@ def time_to_seconds(time):
 ## Commands --------
 @Client.on_message(filters.command(['start']))
 async def start(client, message):
-       await message.reply("➪ ʜᴇʏ., ɪᴀᴍ ʏᴛᴍᴜᴢɪᴄ ʙᴏᴛ\n➪ ʏᴏᴜʀ ᴍᴜsɪᴄ ᴀssɪsᴛᴀɴᴛ 🎧\n➪ sᴇɴᴛ ᴍᴇ ᴀ sᴏɴɢ ɴᴀᴍᴇ ᴡʜɪᴄʜ ʏᴏᴜ ᴡᴀɴᴛ...",
+       await message.reply("➪ Heyy., iam YTMuzic bot\n➪ your music assistant 🎧\n➪ sent me a song name which you want...",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton('Developer', url='https://instagram.com/rizad__x96')
+                    InlineKeyboardButton('Developer', url='https://instagram.com/riz.4d')
                 ]
             ]
         )
@@ -30,7 +30,7 @@ async def start(client, message):
 
 @Client.on_message(filters.command(['help']))
 async def help(client, message):
-       await message.reply("<b><i>How many times have I said that just giving the name of a song\nDo not expect any other help from me.</i>\n\n<b>Eg</b> `Tu hi hai`",
+       await message.reply("<b><i>How many times have I said that just giving the name of a song\nDo not expect any other help from me.</i>\n\n<b>Eg</b> `Middle of the night`",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -42,7 +42,7 @@ async def help(client, message):
 
 @Client.on_message(filters.command(['about']))
 async def about(client, message):
-       await message.reply("➪<b>Project Name</b> : [YT-Muzic](https://t.me/YTMuzic_bot)\n➪<b>Author</b> : [@riz4d](https://t.me/riz4d)\n➪<b>Library</b> : Pyrogram\n➪<b>License Type</b> : GNU General public License (GPL)",
+       await message.reply("➪ <b>Project Name</b> : [YTMuzic Bot](https://t.me/YTMuzic_bot)\n➪ <b>Author</b> : [@riz4d](https://t.me/riz4d)\n➪ <b>Library</b> : Pyrogram\n➪ <b>License Type</b> : GNU General public License (GPL)",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -100,7 +100,7 @@ def a(client, message):
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep =  f'🎧 ᴛɪᴛᴛʟᴇ : {title[:35]}\n ᴅᴜʀᴀᴛɪᴏɴ : {duration}\n ᴠɪᴇᴡs : {views}\n\nTo : {message.from_user.mention()}\n Queries : @riz4d'
+        rep =  f'🎧 ᴛɪᴛᴛʟᴇ : {title[:35]}\n ᴅᴜʀᴀᴛɪᴏɴ : {duration}\n ᴠɪᴇᴡs : {views}\n\nTo : {message.from_user.mention()}\nQueries : [@riz4d](https://instagram.com/riz.4d)'
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
