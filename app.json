@@ -1,15 +1,27 @@
 {
     "name": "YT-Muzic",
-    "description": "A Telegram Bot To Download Music In High Quality. Developed By @riz4d",
+    "description": "A python oriented telegram bot to download songs on telegram developed by @riz4d",
     "logo": "https://a.top4top.io/p_21675qvgj1.jpg",
     "keywords": [
         "rizad"
     ],
+    "repository": "https://github.com/riz4d/YT-Muzic",
     "env": {
         "BOT_TOKEN": {
             "description": "Your Telegram Bot Token from @BotFather",
             "value": ""
         }
+    },
+    
+    "API_ID": {
+      "description": "Get this value from my.telegram.org.",
+      "required": true,
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "Get this value from my.telegram.org.",
+      "required": true,
+      "value": ""
     },
     "addons": [],
     "buildpacks": [
